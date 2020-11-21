@@ -9,3 +9,4 @@ const Brand = ({ height = 200, width = 200, mode = 'contain' }) => (
 )
 
 export default Brand
+export { Brand }

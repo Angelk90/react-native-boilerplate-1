@@ -6,7 +6,7 @@
 import { Colors } from './Variables'
 import { StyleSheet } from 'react-native'
 
-export default StyleSheet.create({
+export const Common = StyleSheet.create({
   button: {
     backgroundColor: Colors.primary,
   },

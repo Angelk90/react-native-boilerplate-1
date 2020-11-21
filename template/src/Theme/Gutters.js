@@ -16,7 +16,7 @@ import { StyleSheet } from 'react-native'
  * <op>: can be ['Margin', 'Padding']
  * <value>: is the value of the <size>
  */
-export default StyleSheet.create({
+export const Gutters = StyleSheet.create({
   ...Object.entries(MetricsSizes).reduce(
     (acc, [key, value]) => ({
       ...acc,

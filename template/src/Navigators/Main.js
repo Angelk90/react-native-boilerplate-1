@@ -1,15 +1,21 @@
 import React from 'react'
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
-import { IndexExampleContainer } from '@/Containers'
+import { useSelector } from 'react-redux'
+import { createStackNavigator } from '@react-navigation/stack'
+import { IndexInstallationContainer, IndexLoginContainer, IndexForgotContainer, IndexHomeContainer } from '@/Containers'
 
-const Tab = createBottomTabNavigator()
+const Stack = createStackNavigator()
 
 // @refresh reset
 const MainNavigator = () => {
+  const isConfiguration = useSelector((state) => state.settings.item.configuration)
+
   return (
-    <Tab.Navigator>
-      <Tab.Screen name="Home" component={IndexExampleContainer} />
-    </Tab.Navigator>
+    <Stack.Navigator headerMode={'none'}>
+      {!isConfiguration && <Stack.Screen name="Installation" component={IndexInstallationContainer} />}
+      <Stack.Screen name="Login" component={IndexLoginContainer} />
+      <Stack.Screen name="Forgot" component={IndexForgotContainer} />
+      <Stack.Screen name="Homepage" component={IndexHomeContainer} />
+    </Stack.Navigator>
   )
 }
 

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { createStackNavigator } from '@react-navigation/stack'
-import { IndexStartupContainer } from '@/Containers'
+import { IndexSplashScreenContainer } from '@/Containers'
 import { useSelector } from 'react-redux'
 
 const Stack = createStackNavigator()
@@ -22,7 +22,7 @@ const ApplicationNavigator = () => {
 
   return (
     <Stack.Navigator headerMode={'none'}>
-      <Stack.Screen name="Startup" component={IndexStartupContainer} />
+      <Stack.Screen name="SplashScreen" component={IndexSplashScreenContainer} />
       {isApplicationLoaded && (
         <Stack.Screen
           name="Main"

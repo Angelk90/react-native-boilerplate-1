@@ -4,7 +4,7 @@
 import { StyleSheet } from 'react-native'
 import { FontSize } from './Variables'
 
-export default StyleSheet.create({
+export const Fonts = StyleSheet.create({
   textSmall: {
     fontSize: FontSize.small,
   },

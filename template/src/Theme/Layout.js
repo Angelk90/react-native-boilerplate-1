@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native'
 
-export default StyleSheet.create({
+export const Layout = StyleSheet.create({
   /* Column Layouts */
   column: {
     flexDirection: 'column',
@@ -51,6 +51,9 @@ export default StyleSheet.create({
   },
   alignItemsStart: {
     alignItems: 'flex-start',
+  },
+  alignItemsEnd: {
+    alignItems: 'flex-end',
   },
   alignItemsStretch: {
     alignItems: 'stretch',
