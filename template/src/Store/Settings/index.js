@@ -5,7 +5,7 @@ const sliceInitialState = {
   item: {
     colorScheme: "light",
     lang: "it",
-    configuration: true
+    configuration: false
   }
 }
 
